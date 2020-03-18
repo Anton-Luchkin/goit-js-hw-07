@@ -28,8 +28,10 @@ inputRef.classList.add("validation-input");
 
 inputRef.addEventListener("change", () => {
   if (Number(inputRef.getAttribute("data-length")) === inputRef.value.length) {
-    inputRef.classList.replace("validation-input", "valid");
+    inputRef.classList.add("valid");
+    inputRef.classList.remove("invalid");
   } else {
-    inputRef.classList.replace("validation-input", "invalid");
+    inputRef.classList.add("invalid");
+    inputRef.classList.remove("valid");
   }
 });
